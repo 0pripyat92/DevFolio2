@@ -1,2 +1,3 @@
 # DevFolio2
- Cópia do projeto DevFolio
+ site
+ https://portifoliocarlosrogerio.netlify.app/

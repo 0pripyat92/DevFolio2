@@ -23,7 +23,7 @@
 --on-background-light: hsl(264, 8%, 12%);
 --surface-light: hsl(293, 100%, 98%);
 --on-surface-light: hsl(264, 8%, 12%);
---on-surface-variant-light: hsl(264, 7%, 29%);
+ -light: hsl(264, 7%, 29%);
 --surface-container-low-light: hsl(278, 44%, 96%);
 --surface-container-light: hsl(276, 38%, 95%);
 --surface-bright-light: hsl(293, 100%, 98%);
@@ -36,7 +36,7 @@
 --background-dark: hsl(260, 14%, 8%);
 --on-background-dark: hsl(280, 17%, 90%);
 --surface-dark: hsl(260, 14%, 8%);
---on-surface-dark: hsl(280, 17%, 90%);
+--on-surface-dark: hsl(280, 18%, 90%);
 --on-surface-variant-dark: hsl(270, 11%, 79%);
 --surface-container-low-dark: hsl(264, 8%, 12%);
 --surface-container-dark: hsl(257, 10%, 14%);
@@ -95,7 +95,7 @@
 */
 --section-padding: 24px;
 --top-bar-height: 64px;
-}
+}    
 
 [data-theme="light"] {
   color-scheme: ligth;
@@ -348,7 +348,7 @@ body {
   transition: var(--motion-duration-short-1) var(--motion-easing-linear);
 }
 
-:has(> .state-layer):hover .state-layer { opacity: 0.08;}
+:has(> .state-layer):hover .state-layer { opacity: 0.08; }
 
 :has(> .state-layer):is(:focus, :focus-visible, :active) .state-layer {
   opacity: 0.12;
@@ -359,7 +359,7 @@ body {
 .container {padding-inline: 16px;}
 
 .img-holder {
-  aspect-ratio: var(--width) / ar(--height);
+  aspect-ratio: var(--width) / var(--height);
   background-color: transparent;
   overflow: hidden;
 }
@@ -467,7 +467,6 @@ body {
   background-color: var(--surface);
   color: var(--on-surface-variant);
   --state-layer-bg: var(--on-surface-variant);
-  
 }
 
 .chip .material-symbols-outline {font-size: 1.8rem;}
@@ -554,10 +553,12 @@ body {
 
 [data-theme="dark"] .theme-btn .dark,
 [data-theme="light"] .theme-btn .light {display: none;}
+
 /*-----------------------------------*\
   #HERO
 \*-----------------------------------*/
-.hero {scroll-padding-block-start: calc(var(--top-bar-height) + 24px);}
+
+/*verificar se 'scroll-' faz sentido nessa linha*/.hero {scroll-padding-block-start: calc(var(--top-bar-height) + 24px);}
  
 .hero .container {
   display: grid;
